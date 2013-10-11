@@ -4,7 +4,7 @@
 
 This plugin allows you to specify that a particular form question should only be
 made visible if the answer to a previous question is a specific value. It does this
-by making use of HTML5 data attributes. The code is based on the [Dependent Questions jQuery plugin](https://github.com/jrsinclair/jquery-dependent-questions), but has been modified for use with Squiz Matrix Custom Forms (Requires Squiz Matrix version 4.14.2 or greater). For example:
+by making use of HTML5 data attributes. The code is based on the [Dependent Questions jQuery plugin](https://github.com/jrsinclair/jquery-dependent-questions), but has been modified for use with Squiz Matrix Custom Forms (requires Squiz Matrix version 4.14.2 or greater). For example:
 
 `````html
 <form action="?" id="myform">
