@@ -1,30 +1,30 @@
-# Dependent Questions jQuery Plugin
+# Matrix Dependent Questions jQuery Plugin
 
-**Make a form question's visibility dependent on some other question simply by adding `data-depends-on="inputName=value"` to your wrapper HTML element. No other code required.**
+**Make a form question's visibility dependent on some other question simply by adding `data-depends-on="inputName=value"` to a HTML input element. No other code required.**
 
 This plugin allows you to specify that a particular form question should only be
 made visible if the answer to a previous question is a specific value. It does this
-by making use of HTML5 data attributes. For example:
+by making use of HTML5 data attributes. The code is based on the [Dependent Questions jQuery plugin](https://github.com/jrsinclair/jquery-dependent-questions), but has been modified for use with Squiz Matrix Custom Forms[^1]. For example:
+
+[^1]: Requires Squiz Matrix version 4.14.2 or greater.
 
 `````html
 <form action="?" id="myform">
-  <fieldset class="form-question">
-    <legend>Would you like to see another question?</legend>
+  <div class="sq-form-question">
+    <div class="sq-form-question-title">Would you like to see another question?</div>
     <span>
-      <input type="radio" name="more" value="no" id="more-no"/>
-      <label for="more-no">No</label>
+      <input type="radio" name="q72:q1" value="0" id="q72_q1_0"/>
+      <label for="q72_q1_0">No</label>
     </span>
     <span>
-      <input type="radio" name="more" value="yes" id="more-yes"/>
-      <label for="more-yes">Yes</label>
+      <input type="radio" name="q72:q1" value="1" id="q72_q1_1"/>
+      <label for="q72_q1_1">Yes</label>
     </span>
-  </fieldset>
-  <fieldset data-depends-on="more=yes">
-    <div class="form-question">
-      <label for="extra">What else would you like to add?</label>
-      <input type="text" name="extra" id="extra"/>
-    </div>
-  </fieldset>
+  </div>
+  <div class="sq-form-question">
+    <label for="extra">What else would you like to add?</label>
+    <input type="text" name="q72:q2" id="extra"  data-depends-on="q72:q1=1"/>
+  </div>
 </form>
 `````
 
@@ -37,7 +37,7 @@ To use plugin, add something like the following to your web page:
 
 `````html
 <script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="jquery.dependent-questions.js"></script>
+<script src="jquery.matrix-dependent-questions.js"></script>
 <script>
   $('#myform').dependentQuestions();
 </script>
