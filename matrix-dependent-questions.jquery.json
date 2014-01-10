@@ -1,6 +1,6 @@
 {
     "name"     : "matrix-dependent-questions",
-    "version"  : "1.0.3",
+    "version"  : "1.0.4",
     "title"    : "Squiz Matrix Dependent Questions",
     "author"   : {
         "name" : "James Sinclair",
