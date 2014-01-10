@@ -1,0 +1,21 @@
+{
+    "newcap": false,
+    "unused": true,
+    "immed": true,
+    "nonew": true,
+    "quotmark": true,
+    "trailing": true,
+    "latedef": true,
+    "maxcomplexity": 10,
+    "maxlen": 85,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "noarg": true,
+    "noempty": true,
+    "strict": true,
+    "undef": true,
+    "node": true,
+    "indent": 4
+}
